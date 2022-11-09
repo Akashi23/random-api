@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 
@@ -67,5 +68,10 @@ func main() {
 		return c.String(http.StatusOK, selectRandomPokemon())
 	})
 
-	e.Logger.Fatal(e.Start(":3000"))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	e.Logger.Fatal(e.Start("0.0.0.0:" + port))
 }
