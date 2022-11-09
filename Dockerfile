@@ -12,6 +12,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -o app .
 FROM alpine:3.11.3
 COPY --from=builder /build/app .
 
-EXPOSE 3000
 # executable
 CMD [ "./app" ]
