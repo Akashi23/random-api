@@ -16,6 +16,7 @@ resource "digitalocean_app" "random-api" {
       image {
         registry_type = "DOCR"
         repository    = "akashi/random-api"
+        tag = ":latest"
       }
     }
   }
