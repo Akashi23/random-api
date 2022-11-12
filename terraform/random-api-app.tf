@@ -11,7 +11,7 @@ resource "digitalocean_app" "random-api" {
   spec {
     name   = "random-api"
     region = "fra"
-    domain = {
+    domain {
         name = "akashi23.me"
     }
     env {
