@@ -2,6 +2,9 @@ resource "digitalocean_app" "random-api" {
   spec {
     name   = "random-api"
     region = "fra"
+    domain = {
+        name = "akashi23.me"
+    }
     env {
       key   = "PORT"
       value = "8080"
@@ -16,7 +19,7 @@ resource "digitalocean_app" "random-api" {
       image {
         registry_type = "DOCR"
         repository    = "akashi/random-api"
-        tag = ":latest"
+        tag = "latest"
       }
     }
   }
