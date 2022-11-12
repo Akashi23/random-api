@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     digitalocean = {
-      source = "digitalocean/digitalocean"
+      source  = "digitalocean/digitalocean"
       version = ">= 2.0"
     }
   }
@@ -12,7 +12,7 @@ resource "digitalocean_app" "random-api" {
     name   = "random-api"
     region = "fra"
     domain {
-        name = "akashi23.me"
+      name = "akashi23.me"
     }
     env {
       key   = "PORT"
@@ -27,8 +27,8 @@ resource "digitalocean_app" "random-api" {
 
       image {
         registry_type = "DOCR"
-        repository    = "akashi/random-api"
-        tag = "latest"
+        repository    = "random-api"
+        tag           = "latest"
       }
     }
   }
