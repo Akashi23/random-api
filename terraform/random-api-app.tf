@@ -3,22 +3,20 @@ resource "digitalocean_app" "random-api" {
     name   = "random-api"
     region = "fra"
     env {
-        PORT = "8080"
+      key   = "PORT"
+      value = "8080"
     }
 
     service {
       name               = "random-api"
       instance_count     = 1
       instance_size_slug = "basic-xs"
-      http_port = 8080
+      http_port          = 8080
 
       image {
         registry_type = "DOCR"
-        repository = "akashi/random-api"
-        tag = "do-v1"
-        deploy_on_push {
-            enabled = true
-        }
+        repository    = "akashi/random-api"
+        tag           = "do-v1"
       }
     }
   }
