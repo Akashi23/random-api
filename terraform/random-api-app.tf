@@ -4,6 +4,8 @@ resource "digitalocean_app" "random-api" {
     region = "fra"
     domain {
       name = "random-api.akashi23.me"
+      type = "PRIMARY"
+      zone = "akashi23.me"
     }
     env {
       key   = "PORT"
