@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     endpoint                = "fra1.digitaloceanspaces.com"
     key                     = "terraform.tfstate"
-    bucket                  = "states"
+    bucket                  = "terraformstatesaves"
     region                  = "us-west-1"
     skip_requesting_account_id = true
     skip_credentials_validation = true
