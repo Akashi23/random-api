@@ -40,6 +40,7 @@ jobs:
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: './terraform'
           tf_actions_comment: true
+          args: '-backend-config="access_key=${{ secrets.SPACES_ACCESS_TOKEN }}" -backend-config="secret_key=${{ secrets.SPACES_SECRET_KEY }}"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Terraform Plan'
