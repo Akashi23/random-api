@@ -3,7 +3,7 @@ resource "digitalocean_app" "random-api" {
     name   = "random-api"
     region = "fra"
     domain {
-      name = "akashi23.me"
+      name = "random-api.akashi23.me"
     }
     env {
       key   = "PORT"
@@ -13,7 +13,7 @@ resource "digitalocean_app" "random-api" {
     service {
       name               = "random-api"
       instance_count     = 1
-      instance_size_slug = "basic-xs"
+      instance_size_slug = "basic-xss"
       http_port          = 8080
 
       image {
