@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    endpoint                = "https://terraformstatesaves.fra1.digitaloceanspaces.com"
+    endpoint                = "fra1.digitaloceanspaces.com"
     key                     = "terraform.tfstate"
     bucket                  = "states"
     region                  = "us-west-1"
