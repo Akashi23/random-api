@@ -1,3 +1,14 @@
+terraform {
+  backend "s3" {
+    endpoint                    = "https://terraformstatesaves.fra1.digitaloceanspaces.com"
+    key                         = "terraform.tfstate"
+    bucket                      = "rappiddev-terraform-remote-state"
+    region                      = "fra1"
+    skip_metadata_api_check     = true
+  }
+}
+
+
 resource "digitalocean_app" "random-api" {
   spec {
     name   = "random-api"
