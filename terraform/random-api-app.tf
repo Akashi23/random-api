@@ -13,7 +13,7 @@ resource "digitalocean_app" "random-api" {
     service {
       name               = "random-api"
       instance_count     = 1
-      instance_size_slug = "basic-xss"
+      instance_size_slug = "basic-xxs"
       http_port          = 8080
 
       image {
