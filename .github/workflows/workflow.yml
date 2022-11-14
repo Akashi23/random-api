@@ -52,8 +52,9 @@ jobs:
         uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.13
-          tf_actions_subcommand: 'apply -refresh-only'
+          tf_actions_subcommand: 'apply'
           tf_actions_working_dir: './terraform'
+          args: '-refresh-only'
         env:
           DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         
