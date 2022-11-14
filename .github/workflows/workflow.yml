@@ -49,12 +49,6 @@ jobs:
           tf_actions_version: 0.12.13
           tf_actions_subcommand: 'plan'
           tf_actions_working_dir: './terraform'
-      - name: 'Terraform Destroy'
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 0.12.13
-          tf_actions_subcommand: 'destroy'
-          tf_actions_working_dir: './terraform'
         env:
           DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: 'Terraform Apply'
