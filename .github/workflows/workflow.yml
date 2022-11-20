@@ -60,4 +60,3 @@ jobs:
           args: '-refresh=true -auto-approve'
         env:
           DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-        
